@@ -8,8 +8,8 @@ const { SHELL, USERNAME } = process.env;
 
 // console.table({ SHELL, USERNAME });
 
-const characters = [ 'Flash', 'Superman', 'Batman' ];
+const characters = [ 'Flash', 'Superman', 'Linterna Verde', 'Batman' ];
 
-const [ _, __, batman ] = characters;
+const [ , , , batman ] = characters; // breakpoint y ejecutarlo en el package
 
 // console.log(batman);
