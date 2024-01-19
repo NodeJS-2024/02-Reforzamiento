@@ -52,5 +52,12 @@ const makePerson = builMakePerson({ getUUID, getAge });
 const obj = { name: 'John', birthdate: '1994-12-10' };
 
 const john = makePerson( obj );
+// console.log({ john });
 
-console.log({ john });
+
+// Promesas
+const getPokemonById = require('./js-foundation/06-promises');
+
+getPokemonById(1, (pokemon) => {
+  console.log(pokemon);
+});
