@@ -1,4 +1,5 @@
 
+const { http } = require('../plugins');
 
 const getPokemonById = async( id ) => {
 
@@ -17,8 +18,12 @@ const getPokemonById = async( id ) => {
   //   // .then(() => { throw new Error('Pokemon no existe') })
   //   .then( (pokemon) => pokemon.name);
 
-  const response = await fetch(url);
-  const pokemon = await response.json();
+  // Async - Await
+  // const response = await fetch(url);
+  // const pokemon = await response.json();
+
+
+  const pokemon = await http.get(url);
 
   return pokemon.name;
 }
