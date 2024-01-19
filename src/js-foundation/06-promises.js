@@ -1,6 +1,6 @@
 
 
-const getPokemonById = (id) => {
+const getPokemonById = async( id ) => {
 
   const url = `https://pokeapi.co/api/v2/pokemon/${ id }`;
 
@@ -12,11 +12,15 @@ const getPokemonById = (id) => {
 
   // });
 
-  return fetch(url)
-    .then( (resp) => resp.json())
-    // .then(() => { throw new Error('Pokemon no existe') })
-    .then( (pokemon) => pokemon.name);
+  // return fetch(url)
+  //   .then( (resp) => resp.json())
+  //   // .then(() => { throw new Error('Pokemon no existe') })
+  //   .then( (pokemon) => pokemon.name);
 
+  const response = await fetch(url);
+  const pokemon = await response.json();
+
+  return pokemon.name;
 }
 
 
