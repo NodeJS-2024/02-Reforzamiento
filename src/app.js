@@ -58,7 +58,17 @@ const john = makePerson( obj );
 // Promesas
 const getPokemonById = require('./js-foundation/06-promises');
 
-getPokemonById(1)
-  .then((pokemon) => { console.log({ pokemon }); })
-  .catch( (err) => { console.log({ err }); })
-  .finally(() => { console.log('Finalmente') });
+// getPokemonById(1)
+//   .then((pokemon) => { console.log({ pokemon }); })
+//   .catch( (err) => { console.log({ err }); })
+//   .finally(() => { console.log('Finalmente') });
+
+
+// Logger - Winston
+const { buildLogger } = require('./plugins');
+
+const logger = buildLogger('app.js');
+
+logger.log('Hola mundo');
+
+
