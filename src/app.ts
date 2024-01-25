@@ -1,8 +1,8 @@
 
 // console.log('Hola Mundo desde app.js');
 
-import { getPokemonById } from './js-foundation/06-promises';
-import { buildLogger } from './plugins/logger.plugin';
+// import { getPokemonById } from './js-foundation/06-promises';
+// import { buildLogger } from './plugins/logger.plugin';
 
 // const { emailTemplate } = require('./js-foundation/01-template');
 // require('./js-foundation/02-destructuring');
@@ -61,10 +61,10 @@ import { buildLogger } from './plugins/logger.plugin';
 // // Promesas
 // const getPokemonById = require('./js-foundation/06-promises');
 
-getPokemonById(1)
-  .then((pokemon) => { console.log({ pokemon }); })
-  .catch( (err) => { console.log({ err }); })
-  .finally(() => { console.log('Finalmente') });
+// getPokemonById(1)
+//   .then((pokemon) => { console.log({ pokemon }); })
+//   .catch( (err) => { console.log({ err }); })
+//   .finally(() => { console.log('Finalmente') });
 
 
 // // Logger - Winston
