@@ -1,7 +1,7 @@
 
 // const { http } = require('../plugins');
 
-import { httpClient } from "../plugins";
+import { httpClient } from '../plugins';
 
 export const getPokemonById = async( id: string | number ): Promise<string> => {
 
@@ -24,10 +24,15 @@ export const getPokemonById = async( id: string | number ): Promise<string> => {
   // const response = await fetch(url);
   // const pokemon = await response.json();
 
+  try {
 
-  const pokemon = await httpClient.get(url);
+    const pokemon = await httpClient.get(url);
 
-  return pokemon.name;
+    return pokemon.name;
+  } catch(error) {
+    throw `El pokemon no se encuentra con el id: ${ id }`;
+  }
+
 }
 
 
